@@ -132,7 +132,7 @@ function CombatBerserker:Attack(monsterActor)
           selfPlayer:SetActionState(ACTION_FLAG_MOVE_BACKWARD | ACTION_FLAG_MAIN_ATTACK, 100)
 
           if FRENZIED_DESTROYER_ID ~= 0 and not selfPlayer.BlackRage == 100 and selfPlayer.Mana >= 60 and string.match(selfPlayer.CurrentActionName, "BT_skill_EarthQuake") then
-            print("Launching Frenzied Desrtoyer")
+            print("Launching Frenzied Destroyer 1")
             selfPlayer:SetActionState(ACTION_FLAG_MOVE_BACKWARD | ACTION_FLAG_MAIN_ATTACK | ACTION_FLAG_SECONDARY_ATTACK, 4200)
             return
           end
@@ -143,7 +143,7 @@ function CombatBerserker:Attack(monsterActor)
           selfPlayer:SetActionState(ACTION_FLAG_MOVE_BACKWARD | ACTION_FLAG_MAIN_ATTACK, 100)
 
           if FRENZIED_DESTROYER_ID ~= 0 and selfPlayer.Mana >= 60 and string.match(selfPlayer.CurrentActionName, "BT_skill_EarthQuake") then
-            print("Launching Frenzied Desrtoyer")
+            print("Launching Frenzied Destroyer 2")
             selfPlayer:SetActionState(ACTION_FLAG_MOVE_BACKWARD | ACTION_FLAG_MAIN_ATTACK | ACTION_FLAG_SECONDARY_ATTACK, 4200)
             return
           end
@@ -154,7 +154,7 @@ function CombatBerserker:Attack(monsterActor)
           selfPlayer:SetActionState(ACTION_FLAG_MOVE_BACKWARD | ACTION_FLAG_MAIN_ATTACK, 100)
 
           if FRENZIED_DESTROYER_ID ~= 0 and selfPlayer.Mana >= 60 and string.match(selfPlayer.CurrentActionName, "BT_skill_EarthQuake") and not selfPlayer:IsSkillLearned(RAGING_THUNDER_ID) and actorPosition.Distance3DFromMe <= monsterActor.BodySize + 300 and actorPosition.Distance3DFromMe >= monsterActor.BodySize + 100 then
-            print("Launching Frenzied Desrtoyer")
+            print("Launching Frenzied Destroyer 3")
             selfPlayer:SetActionState(ACTION_FLAG_MOVE_BACKWARD | ACTION_FLAG_MAIN_ATTACK | ACTION_FLAG_SECONDARY_ATTACK, 2200)
             return
           end
